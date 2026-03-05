@@ -10,7 +10,7 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\Product;
 
-class HomeController extends Controller
+class SubCategoryController extends Controller
 {
 
   protected $categorys;

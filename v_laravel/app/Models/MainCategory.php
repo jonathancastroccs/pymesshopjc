@@ -18,5 +18,5 @@ class MainCategory extends Model
 		'promo_banner'		
 	];
 
-	
+		
 }
