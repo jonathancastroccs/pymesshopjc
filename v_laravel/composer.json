@@ -2,7 +2,7 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "jonathancastroccs/pymesshopjc",
     "type": "project",
-    "description": "Open Source Online Store.",
+    "description": "Open Source Online Store Version Laravel 12.",
     "keywords": ["ecommerce", "ecommerce-website"],
     "license": "GPL-3.0",
     "authors": [

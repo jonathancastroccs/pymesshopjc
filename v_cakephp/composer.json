@@ -1,9 +1,15 @@
 {
-    "name": "cakephp/app",
-    "description": "CakePHP skeleton app",
-    "license": "MIT",
+    "name": "jonathancastroccs/pymesshopjc",
     "type": "project",
-    "homepage": "https://cakephp.org",
+    "description": "Open Source Online Store Version CakePHP 5.",
+    "keywords": ["ecommerce", "ecommerce-website"],
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Jonathan Castro",
+            "email": "sistemaspymesjc@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=8.2",
         "cakephp/cakephp": "^5.3.0",
