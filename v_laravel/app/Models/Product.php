@@ -38,4 +38,18 @@ class Product extends Model
       ->limit(18)
       ->get();
     }
+
+    public function getProductsById($product_id_numb,$mc_id_numb,$maincategoryurl)
+    {
+        return Product::select('products.product_name','products.url_name','products.product_img','products.product_content','products.price','products.unit','t.type_name','mc.id as maincategoryid','products.id as productid','products.product_imggo','products.product_imggt','t.type_color','products.instagram_url','products.mlibre_url')   
+        ->join('users_products as up', 'up.product_id', '=', 'products.id')
+        ->join('users as u', 'u.id', '=', 'up.user_id')    
+        ->join('types as t', 't.id', '=', 'products.type_id')   
+        ->join('maincategorys as mc', 'mc.id', '=', 'products.maincategory_id')   
+        ->where('products.id', $product_id_numb)    
+        ->where('products.maincategory_id', $mc_id_numb)
+        ->where('mc.maincategory_url', $maincategoryurl)   
+        ->where('products.publish', null)    
+        ->firstOrFail();
+    }
 }
