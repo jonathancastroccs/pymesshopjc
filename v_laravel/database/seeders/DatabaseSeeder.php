@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
      
        \App\Models\User::truncate();
 
-       \App\Models\User::factory(3)->create();
+       \App\Models\User::factory(1)->create();
     
     }
 }
