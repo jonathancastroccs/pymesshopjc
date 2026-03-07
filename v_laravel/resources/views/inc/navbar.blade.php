@@ -20,7 +20,14 @@
         <span class="mr-2 d-lg-inline text-gray-600 small">Pickup / Envios</span>             
       </a>
 
-    </li>  
+    </li> 
+
+     <li class="nav-item">
+      <a class="nav-link" href="/login">
+        <span class="mr-2 d-lg-inline text-gray-600 small">Login</span>             
+      </a>
+
+    </li>   
 
 
    @if(Auth::user())

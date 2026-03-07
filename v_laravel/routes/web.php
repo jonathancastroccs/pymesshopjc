@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SubCategoryFreeController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 
 use App\Http\Controllers\User\ProductController;
@@ -17,7 +18,17 @@ Route::get('/{maincategoryurl}/productos/{productname}.{maincategoryid}.{product
 
 Route::get('/categoria/{subcategory}', [SubCategoryFreeController::class, 'index'])->name('subcategoryfree');
 
+Route::get('login', [AuthenticatedSessionController::class, 'create'])
+->name('login');
+
+Route::post('login', [AuthenticatedSessionController::class, 'store']);
+
+Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
+->name('logout');
+
 
 Route::middleware('auth')->group(function () {
+
+    Route::get('/settings', [UserController::class, 'index'])->name('settings');
 
 });
