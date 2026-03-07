@@ -23,7 +23,12 @@ Route::get('login', [AuthenticatedSessionController::class, 'create'])
 
 Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
+Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
+->name('logout');
+
 
 Route::middleware('auth')->group(function () {
+
+    Route::get('/settings', [UserController::class, 'index'])->name('settings');
 
 });
