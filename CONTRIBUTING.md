@@ -8,3 +8,66 @@ Please note we have a code of conduct, please follow it in all your interactions
 - Update the README.md with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations and container parameters.
 - Target the develop branch for your Pull Requests as this is were new changes are introduced.
 - After being successfully reviewed pull requests will be merged to develop branch and will finally be included in an upcoming release.
+
+## Steps Laravel Project:
+
+
+- Clone Project
+
+```bash
+$ git clone https://github.com/jonathancastroccs/pymesshopjc.git
+``` 
+
+- Pull Project Dev Branch
+
+```bash
+$ git pull origin dev
+``` 
+- Navigate to the root of the Laravel project
+
+```bash
+$ cd v_laravel
+``` 
+- Setup vendor libraries 
+
+```bash
+$ composer install
+```
+
+- Setup .env file and create database
+- Avoid changing the author data as this may cause problems when running the project. 
+
+```bash
+
+```
+- Run server
+
+
+```bash
+$ php artisan key:generate
+```  
+
+```bash
+$ php artisan serve
+```
+```bash
+$ php artisan migrate
+```
+```bash
+$ php artisan db:seed
+```
+
+```bash
+$ php artisan storage:link
+```
+
+
+
+
+## Access Web-App:
+
+_Admin: sistemaspymesjc@gmail.com
+_Pass: Test1234
+
+_User: sistemaspymesjc@gmail.com
+_Pass: Test1234
