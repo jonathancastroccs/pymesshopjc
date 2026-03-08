@@ -52,4 +52,13 @@ class Product extends Model
         ->where('products.publish', null)    
         ->firstOrFail();
     }
+
+     public function getProductsByCategorys($subcategory)
+    {
+        return Product::select('products.id as productid','products.product_name','products.product_img','products.url_name','mc.id as maincategoryid','mc.maincategory_url','products.price')  
+        ->join('maincategorys as mc', 'mc.id', '=', 'products.maincategory_id')
+        ->where('mc.maincategory_url', $subcategory)
+        ->orderBy('products.id', 'desc')     
+        ->paginate(30);
+    }
 }
