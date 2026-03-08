@@ -9,11 +9,18 @@
 @yield('meta')
 
 
-<meta name="author" content="Jonathan Castro">
-<meta name="copyright" content="Sistemas Pymes JC" /> 
+<meta name="author" content="{{env('APP_AUTHOR')}}">
+<meta name="copyright" content="{{env('APP_COPYRIGHT')}}" /> 
 
- <link rel="icon" type="image/x-icon" href="{{URL('public/images')}}/sistemaspymesjc_logo.png" />
 
+@if(env("APP_ENV") == 'local')
+ <link rel="icon" type="image/x-icon" href="{{env('PATH_LOCAL')}}/sistemaspymesjc.png" /> 
+
+@endif
+
+@if(env("APP_ENV") == 'production')
+ <link rel="icon" type="image/x-icon" href="{{env('PATH_PRODUCTION')}}/sistemaspymes.png" />
+@endif
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
