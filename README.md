@@ -63,15 +63,16 @@ $ composer install
 ```bash
 First Step Create New Database Example: pymesshopjc
 APP_ENDPOINT=https://sistemaspymesjc.blogspot.com/p/trabaja-con-nosotros.html
+APP_ENDPOINT_LOCAL=
 APP_AUTHOR=jonathancastro
-APP_COPYRIGHT=https://sistemaspymesjc.blogspot.com
+APP_EMAIL=sistemaspymesjc@gmail.com
+APP_COPYRIGHT=sistemaspymesjc
+APP_DONATE=https://www.paypal.com/paypalme/programadorjonathan
+APP_PHONE=5804241666224
 
-PATH_LOCAL=yourpath
-PATH_PRODUCTION=yourpath
-
-USER_NAME=yourusername
-USER_EMAIL=youremail
-USER_PASS=yourpassword
+DB_DATABASE=pymesshopjc
+DB_USERNAME=jonathan
+DB_PASSWORD=123
 ```
 - Run server
 
