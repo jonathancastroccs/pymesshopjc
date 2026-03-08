@@ -4,7 +4,7 @@
 
 <title>Tienda Pokémon | Ecommerce online</title> 
 
-<link rel="canonical" href="https://tiendapokemon.store/" />
+<link rel="canonical" href="{{env('APP_URL')}}" />
 
 <meta name="description" content="Tienda Online Caracas / Venezuela,cartas tcg,tazos,albums, Ofertas, Promociones, Descuentos en tiendapokemon.store">
 
@@ -12,12 +12,9 @@
 <meta property="og:title" content="Tienda Pokémon | Ecommerce online" />
 <meta property="og:description" content="Tienda Online Caracas / Venezuela,cartas tcg,tazos,albums, Ofertas, Promociones, Descuentos en tiendapokemon.store" />
 
-<meta property="og:url" content="https://tiendapokemon.store/" />
+<meta property="og:url" content="{{env('APP_URL')}}" />
 
 <meta property="og:image" content="https://tiendapokemon.store/public/images/tiendapokemon.png" /> 
-
-<meta name="author" content="Jonathan Castro">
-<meta name="copyright" content="Sistemas Pymes JC" /> 
 
 
 

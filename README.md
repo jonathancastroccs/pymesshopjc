@@ -130,7 +130,7 @@ _sistemaspymesjc@gmail.com_
 
 ## Donations 🎁
 
-* [Paypal](https://www.paypal.com/paypalme/joncastroweb) - Thank you very much for your contribution.
+* [Paypal](https://www.paypal.com/paypalme/programadorjonathan) - Thank you very much for your contribution.
 
 * [Patreon](https://www.patreon.com/c/LaravelCoders) - Thank you very much for your contribution.
 
