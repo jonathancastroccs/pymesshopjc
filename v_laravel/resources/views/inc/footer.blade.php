@@ -98,22 +98,22 @@
 
  @if(!Request::segment(1) == '/')    
 
-  <!-- Copyright -->
+
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2026 Copyright:    
-     Sitio Web Desarrollado por Jonathan Castro
-    <a class="text-reset fw-bold" href="https://sistemaspymesjc.blogspot.com/p/trabaja-con-nosotros.html" target="_blank">Sistemas Pymes JC</a>
+    © 2018 - {{date('Y')}}  Copyright:    
+     Website developed by {{env('APP_AUTHOR')}}
+    <a class="text-reset fw-bold" target="_blank" href="{{env('APP_ENDPOINT')}}">{{env('APP_COPYRIGHT')}}</a>
   </div>
 
   @else
 
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2026 Copyright:   
-     Sitio Web Desarrollado por Jonathan Castro
-    <a class="text-reset fw-bold">Sistemas Pymes JC</a>
+ <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2018 - {{date('Y')}} Copyright:    
+     Website developed by {{env('APP_AUTHOR')}}
+    <a class="text-reset fw-bold">{{env('APP_COPYRIGHT')}}</a>
   </div>
 
   @endif
-  <!-- Copyright -->
+ 
 </footer>
 <!-- Footer -->
