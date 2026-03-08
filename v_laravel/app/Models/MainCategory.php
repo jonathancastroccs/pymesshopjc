@@ -18,5 +18,13 @@ class MainCategory extends Model
 		'promo_banner'		
 	];
 
+	public function getMainCategorysById($subcategory)
+	{
+		return MainCategory::select('maincategorys.id','maincategorys.maincategory_url','maincategorys.maincategory_name')   
+        ->where('maincategorys.maincategory_url', $subcategory) 
+        ->firstOrFail();
+
+	}
+
 		
 }
