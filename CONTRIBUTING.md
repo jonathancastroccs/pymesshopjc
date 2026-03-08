@@ -38,6 +38,21 @@ $ composer install
 - Avoid changing the author data as this may cause problems when running the project. 
 
 ```bash
+First Step Create New Database Example: pymesshopjc
+APP_ENDPOINT=https://sistemaspymesjc.blogspot.com/p/trabaja-con-nosotros.html
+APP_ENDPOINT_LOCAL=
+APP_AUTHOR=jonathancastro
+APP_EMAIL=sistemaspymesjc@gmail.com
+APP_COPYRIGHT=sistemaspymesjc
+APP_DONATE=https://www.paypal.com/paypalme/programadorjonathan
+APP_PHONE=5804241666224
+
+DB_DATABASE=pymesshopjc
+DB_USERNAME=jonathan
+DB_PASSWORD=123
+```
+
+```bash
 
 ```
 - Run server
