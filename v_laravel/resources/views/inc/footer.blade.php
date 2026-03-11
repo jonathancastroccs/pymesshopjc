@@ -99,18 +99,18 @@
  @if(!Request::segment(1) == '/')    
 
 
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+  <div class="text-center p-4" id="my_footer"  style="background-color: rgba(0, 0, 0, 0.05);">
     © 2018 - {{date('Y')}}  Copyright:    
      Website developed by {{env('APP_AUTHOR')}}
-    <a class="text-reset fw-bold" target="_blank" href="{{env('APP_ENDPOINT')}}">{{env('APP_COPYRIGHT')}}</a>
+    <a class="text-reset fw-bold" id="f_info" target="_blank" href="{{env('APP_ENDPOINT')}}">{{env('APP_COPYRIGHT')}}</a>
   </div>
 
   @else
 
- <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+ <div class="text-center p-4" id="my_footer" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2018 - {{date('Y')}} Copyright:    
      Website developed by {{env('APP_AUTHOR')}}
-    <a class="text-reset fw-bold">{{env('APP_COPYRIGHT')}}</a>
+    <a class="text-reset fw-bold" id="f_info">{{env('APP_COPYRIGHT')}}</a>
   </div>
 
   @endif
