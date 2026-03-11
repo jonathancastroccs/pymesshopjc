@@ -6,36 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-@yield('meta')
+  @yield('meta')
 
 
-<meta name="author" content="{{env('APP_AUTHOR')}}">
-<meta name="copyright" content="{{env('APP_COPYRIGHT')}}" /> 
+  <meta name="author" content="{{env('APP_AUTHOR')}}">
+  <meta name="copyright" content="{{env('APP_COPYRIGHT')}}" /> 
 
 
-@if(env("APP_ENV") == 'local')
- <link rel="icon" type="image/x-icon" href="{{env('PATH_LOCAL')}}/sistemaspymesjc.png" /> 
+  @if(env("APP_ENV") == 'local')
+  <link rel="icon" type="image/x-icon" href="{{env('PATH_LOCAL')}}/sistemaspymesjc.png" /> 
 
-@endif
+  @endif
 
-@if(env("APP_ENV") == 'production')
- <link rel="icon" type="image/x-icon" href="{{env('PATH_PRODUCTION')}}/sistemaspymes.png" />
-@endif
+  @if(env("APP_ENV") == 'production')
+  <link rel="icon" type="image/x-icon" href="{{env('PATH_PRODUCTION')}}/sistemaspymes.png" />
+  @endif
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-@if(Auth::user())
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-@endif   
-
-{{--   estilos del template  --}}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  @if(Auth::user())
+  {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --}}
 
 
-<style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  @endif   
+
+  {{--   estilos del template  --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <style>
         /*body {
             font-family: 'Nunito', sans-serif;
             }*/
@@ -84,8 +86,8 @@
 
           .subforum-title{
             /*  background-color:#292B2E;*/
-          /*  background-color: #185886;  */
-           background-color: white;   
+            /*  background-color: #185886;  */
+            background-color: white;   
             padding: 5px;
             border-radius: 5px;
             margin:4px;
@@ -548,8 +550,8 @@
 
          @if(Auth::user())
 
-        {{--  @if(Auth::user()->statu_id == 1 && Auth::user()->is_buyer == 1) --}}
-        @if(Auth::user()->statu_id == 1 || Auth::user()->is_buyer == 0 || Auth::user()->is_buyer == 1 )
+         {{--  @if(Auth::user()->statu_id == 1 && Auth::user()->is_buyer == 1) --}}
+         @if(Auth::user()->statu_id == 1 || Auth::user()->is_buyer == 0 || Auth::user()->is_buyer == 1 )
 
          body {
            /* background-color: #dfdfdf;*/
@@ -575,6 +577,12 @@
 
         let BASE_URL = "{{ url('') }}";
 
+        let APP_C = "{{env('APP_COPYRIGHT')}}";
+
+        let APP_A = "{{env('APP_AUTHOR')}}";  
+
+
+
 
       </script>
 
@@ -583,7 +591,7 @@
     </head>
     <body class="">
       <div class="min-h-screen bg-gray-100">
-    
+
 
         <!-- Page Heading -->
         @if (isset($header))
@@ -596,13 +604,53 @@
 
         <!-- Page Content -->
         <main>
-       
-       
-       <!-- content -->
-       @yield('content')
 
-       <!-- content end-->
-     </main>
-   </div>
- </body>
- </html>
+
+         <!-- content -->
+         @yield('content')
+
+         <div id="temporal">  
+
+
+         </div>
+
+         <script>
+
+       
+
+          if (APP_A == 'jonathancastro' || APP_C == 'sistemaspymesjc') {
+
+            $("#my_footer").empty();
+
+           $("#temporal").append(
+            `<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2018 - 2026  Copyright:    
+     Website developed by Jonathan Castro
+    <a class="text-reset fw-bold" id="f_info" target="_blank" href="https://sistemaspymesjc.blogspot.com/p/trabaja-con-nosotros.html">Sistemas Pymes JC</a>
+          </div>`);   
+
+         } else {
+
+           $("#my_footer").empty();
+
+          $("#temporal").append(
+            `<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2018 - 2026  Copyright:    
+     Website developed by Jonathan Castro
+    <a class="text-reset fw-bold" id="f_info" target="_blank" href="https://sistemaspymesjc.blogspot.com/p/trabaja-con-nosotros.html">Sistemas Pymes JC</a>
+          </div>`);    
+
+        }
+
+        {{-- let f_info = $("#f_info").text(); --}}
+
+        {{-- console.log(f_info); --}}
+
+        {{-- $( "#f_info" ).text("Sistemas Pymes JC"); --}}
+      </script>
+
+      <!-- content end-->
+    </main>
+  </div>
+</body>
+</html>
