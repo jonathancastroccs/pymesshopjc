@@ -40,7 +40,7 @@ return new class extends Migration
       $post->product_imggt = 'catalina-blanca.png';
       $post->url_name = 'carta-pokemon-mixta';
       $post->product_content = '<h2>Carta pokemon Mixta Numero #2</h2><br><p>cartas pokemon gotta catch em all de nintendo, decorativa cartas de los años 90</p>';
-      $post->instagram_url = 'DNe0b8DNIWj';
+      $post->instagram_url = 'DVg8Y7ngZZL';
       $post->maincategory_id = 1;  
       $post->type_id = 1;
       $post->price = 5;
