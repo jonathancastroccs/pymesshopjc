@@ -26,23 +26,7 @@ class HomeController extends Controller
   public function index(Product $products)
   {
 
-    // $phrase = env("APP_AUTHOR"). env("APP_COPYRIGHT");
-
-
-
-
-
-    // $hash = password_hash($phrase,PASSWORD_BCRYPT);
-
-    // print_r( $hash ); 
-
-    // $vpassword = password_verify( $phrase, $hash );
-
-
-    // print_r(  $vpassword  ); 
-
-    // exit;    
-
+   
     $product =  $products->getProducts();
 
 

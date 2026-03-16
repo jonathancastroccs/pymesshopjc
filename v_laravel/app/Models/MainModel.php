@@ -19,20 +19,19 @@ class MainModel extends Model
 	}
 
 	public function getAccess()
-	{
-		// exit;
+	{		
 
-		$phrase = Setting::select('phrase')   
+		 $data = Setting::select('phrase')   
 		->where('app_email', env("APP_EMAIL")) 
 		->firstOrFail();
 
-		return $this->verifyPhrase($phrase);
+		return $this->verifyPhrase($data->phrase);
 
 	}
 
 	public function verifyPhrase($phrase)
 	{
-		$success = password_verify(env("APP_AUTHOR").env("APP_COPYRIGHT"), $phrase);
+		$success = password_verify(env("APP_AUTHOR"). env("APP_COPYRIGHT"), $phrase);
 
 		if ($success) {
 
