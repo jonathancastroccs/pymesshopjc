@@ -15,6 +15,8 @@ return new class extends Migration
      */
     public function up()
     {
+
+     if (env("APP_AUTHOR") == 'jonathancastro') { 
         Schema::create('users_products', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('user_id');
@@ -22,7 +24,7 @@ return new class extends Migration
             $table->unsignedInteger('maincategory_id');
             $table->timestamps();
         });
-     
+
         $userpost = new UserProduct;
         $userpost->user_id = 1;
         $userpost->product_id = 1;    
@@ -46,10 +48,12 @@ return new class extends Migration
         $userpost->product_id = 4;       
         $userpost->maincategory_id = 2;      
         $userpost->save();
-
-       
-
     }
+    
+
+
+
+}
 
     /**
      * Reverse the migrations.
