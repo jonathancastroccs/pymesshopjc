@@ -14,6 +14,7 @@ class Setting extends Model
 		'app_author',
 		'app_copyright',
 		'app_email',
+		'phrase',
 		'app_donate',
 		'app_phone'					
 	];	

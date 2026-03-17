@@ -24,8 +24,9 @@ class HomeController extends Controller
   }
 
   public function index(Product $products)
-  {     
+  {
 
+   
     $product =  $products->getProducts();
 
 
@@ -52,7 +53,7 @@ class HomeController extends Controller
 
     if (!empty($request->post)) {
 
-      
+
 
     }
 

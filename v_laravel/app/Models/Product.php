@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Product extends MainModel
 {
     protected $table = 'products';
 
@@ -25,18 +25,27 @@ class Product extends Model
         'views'        
     ];
 
+    public function __construct()
+    {       
+        // parent::__construct();
+
+        // print_r($this->$userAccess);
+        $this->getAccess();            
+
+    }
+
     public function getProducts()
     {
         return Product::select('products.id as productid','products.product_name','products.product_img','products.url_name','mc.id as maincategoryid','mc.maincategory_url','products.price')  
-      ->join('maincategorys as mc', 'mc.id', '=', 'products.maincategory_id')
-      ->where('mc.id', 1)
-      ->orWhere('mc.id', 2)
-      ->orWhere('mc.id', 3)
-      ->orWhere('mc.id', 6)
-      ->orWhere('mc.id', 7)
-      ->orderBy('products.id', 'desc')
-      ->limit(18)
-      ->get();
+        ->join('maincategorys as mc', 'mc.id', '=', 'products.maincategory_id')
+        ->where('mc.id', 1)
+        ->orWhere('mc.id', 2)
+        ->orWhere('mc.id', 3)
+        ->orWhere('mc.id', 6)
+        ->orWhere('mc.id', 7)
+        ->orderBy('products.id', 'desc')
+        ->limit(18)
+        ->get();
     }
 
     public function getProductsById($product_id_numb,$mc_id_numb,$maincategoryurl)
@@ -53,7 +62,7 @@ class Product extends Model
         ->firstOrFail();
     }
 
-     public function getProductsByCategorys($subcategory)
+    public function getProductsByCategorys($subcategory)
     {
         return Product::select('products.id as productid','products.product_name','products.product_img','products.url_name','mc.id as maincategoryid','mc.maincategory_url','products.price')  
         ->join('maincategorys as mc', 'mc.id', '=', 'products.maincategory_id')
