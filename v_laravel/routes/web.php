@@ -8,6 +8,9 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 
 use App\Http\Controllers\User\ProductController;
+use App\Http\Controllers\User\UserController;
+
+use App\Http\Controllers\Admin\UserController as AdminController;
 
 
 Route::get('/', [HomeController::class, 'index']);
@@ -30,5 +33,11 @@ Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
 Route::middleware('auth')->group(function () {
 
     Route::get('/settings', [UserController::class, 'index'])->name('settings');
+
+    Route::get('/admin/products', [AdminController::class, 'productcreate'])->name('admin.productcreate');
+
+    Route::get('/product/{subcategory}/{id}/post-thread', [ProductController::class, 'index'])->name('product');
+
+    Route::post('product/post', [ProductController::class, 'store'])->name('product.store');
 
 });
