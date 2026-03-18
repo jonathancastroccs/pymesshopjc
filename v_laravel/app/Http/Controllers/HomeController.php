@@ -26,7 +26,7 @@ class HomeController extends Controller
   public function index(Product $products)
   {
 
-   
+
     $product =  $products->getProducts();
 
 
@@ -43,12 +43,9 @@ class HomeController extends Controller
   public function findPost(Request $request)
   { 
 
-    $findpost = Product::select('products.id as productid','products.product_name','products.product_img','products.url_name','mc.id as maincategoryid','mc.maincategory_url','products.price','products.created_at','products.updated_at')  
-    ->join('maincategorys as mc', 'mc.id', '=', 'products.maincategory_id')
-    ->where('products.product_name','like','%'.$request->post.'%')    
-    ->orderBy('products.id', 'desc')
-    ->limit(10)   
-    ->get();    
+    $this->products = new Product();    
+
+    $findpost =  $this->products->getProductsBySearch($request->post);      
 
 
     if (!empty($request->post)) {

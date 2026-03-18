@@ -70,4 +70,15 @@ class Product extends MainModel
         ->orderBy('products.id', 'desc')     
         ->paginate(30);
     }
+
+     public function getProductsBySearch($post)
+    {
+        return Product::select('products.id as productid','products.product_name','products.product_img','products.url_name','mc.id as maincategoryid','mc.maincategory_url','products.price','products.created_at','products.updated_at')  
+    ->join('maincategorys as mc', 'mc.id', '=', 'products.maincategory_id')
+    ->where('products.product_name','like','%'.$post.'%')    
+    ->orderBy('products.id', 'desc')
+    ->limit(10)   
+    ->get(); 
+
+    }
 }
