@@ -35,7 +35,16 @@ $ composer install
 ```
 
 - Setup .env file and create database
-- Avoid changing the author data as this may cause problems when running the project. 
+- Avoid changing the author data as this may cause problems when running the project.
+
+- Copy .env.example config and generate Key project 
+
+```bash
+$ cp .env.example .env
+``` 
+```bash
+$ php artisan key:generate
+``` 
 
 ```bash
 First Step Create New Database Example: pymesshopjc
@@ -53,29 +62,19 @@ DB_PASSWORD=123
 ```
 
 ```bash
-
+$ php artisan migrate:fresh --seed
+```
+```bash
+$ php artisan storage:link
+```
+```bash
+$ php artisan optimize:clear
 ```
 - Run server
-
-
-```bash
-$ php artisan key:generate
-```  
 
 ```bash
 $ php artisan serve
 ```
-```bash
-$ php artisan migrate
-```
-```bash
-$ php artisan db:seed
-```
-
-```bash
-$ php artisan storage:link
-```
-
 
 
 
