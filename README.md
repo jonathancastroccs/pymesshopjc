@@ -40,11 +40,16 @@ sudo apt-get install php8.3 php8.3-pgsql php8.3-mysql php8.3-intl php8.3-json ph
 
 The following steps are meant to be used on a development server.
 
-
 - Clone Project
 
 ```bash
 $ git clone https://github.com/jonathancastroccs/pymesshopjc.git
+``` 
+
+- Pull Project Dev Branch
+
+```bash
+$ git pull origin dev
 ``` 
 - Navigate to the root of the Laravel project
 
@@ -58,7 +63,16 @@ $ composer install
 ```
 
 - Setup .env file and create database
-- Avoid changing the author data as this may cause problems when running the project. 
+- Avoid changing the author data as this may cause problems when running the project.
+
+- Copy .env.example config and generate Key project 
+
+```bash
+$ cp .env.example .env
+``` 
+```bash
+$ php artisan key:generate
+``` 
 
 ```bash
 First Step Create New Database Example: pymesshopjc
@@ -74,28 +88,21 @@ DB_DATABASE=pymesshopjc
 DB_USERNAME=jonathan
 DB_PASSWORD=123
 ```
-- Run server
-
 
 ```bash
-$ php artisan key:generate
-```  
+$ php artisan migrate:fresh --seed
+```
+```bash
+$ php artisan storage:link
+```
+```bash
+$ php artisan optimize:clear
+```
+- Run server
 
 ```bash
 $ php artisan serve
 ```
-```bash
-$ php artisan migrate
-```
-```bash
-$ php artisan db:seed
-```
-
-```bash
-$ php artisan storage:link
-```
-
-
 
 
 ## Access Web-App:
