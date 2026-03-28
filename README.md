@@ -1,30 +1,51 @@
 <h1 align="center">
-	<br>
-	<a href="https://sistemaspymesjc.blogspot.com/p/trabaja-con-nosotros.html">
-		<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPQpKEVIcgJYYEkLe_ZtWgH9VzQooGM4BfFqVtnVXgZxDZfE9xJbZ-FSQQICDuYorTNWg9-Mn864x7YFknZBBol9r5hPmaSUhGkvtx6nZdzT1Mr4rafsaLtT7a1OtG8xmaO2dq7z_-luspdkuySzljLZ1xx12qmU2Yx6zEmY0NiOQCqfZtiroKqRRobrc_/s1280/ingeniero-de-software-.png" alt="WebmasterForum" width="150">
-	</a>
-	<br>
-	Pymes Shop JC
-	<br>
+  <br>
+  <a href="https://sistemaspymesjc.blogspot.com/p/trabaja-con-nosotros.html">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj80lJ2YL2GVpJi0J9bSBGXtwbjx-JXLjA63ZLH5lRzxjuwxYHhXzsKpTU8rjLiAQPq07prlMOiW7c8XKh3Klv91Hf_CM9e8wpuHg7EiqZYNW6utWYKogRHdFTtUnsd4_CAKpMauAPWYMY5kzb18RZgrKzEUs4jgd7g4gJ807oqt5mGhaM2aSxw07wYV3w/s320/foroworkers_logo.png" alt="Foroworkers" width="150">
+  </a>
+  <br>
+  Introduction
+  <br>
 </h1>
 
 <br>
 
+PymesShopJC is an opensource laravel eCommerce framework built on some of the hottest technologies such as [Laravel](https://laravel.com/) (a [PHP](https://secure.php.net/) framework) and [Jquery.js](https://jquery.com/) a powerful Javascript framework.
+
+<p align="center">
+  <img alt="GitHub" src="https://img.shields.io/github/license/foroworkers/foroworkers?style=for-the-badge">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/foroworkers/foroworkers?style=for-the-badge">
+  <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/foroworkers/Foroworkers/total?style=for-the-badge">
+  <a href="https://discord.gg/ntpz4aRHHy">
+    <img alt="Chat On Discord" src="https://img.shields.io/badge/chat-on%20discord-7289da?style=for-the-badge&logo=discord&logoColor=white">
+  </a>
+</p>
+
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#features">Features</a> •
+  <a href="#setup">Setup</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#access"> Access</a> •
+   <a href="#support"> Support</a> •
+  <a href="#donations"> Donations</a> •
+</p>
+
 ![screenshot](screenshot.png)
 
-#  # pymesshopjc
-Open source Ecommerce PHP, Laravel, Symfony, CakePHP, Yii, Codeigniter, Slim Framework
+## About
+A powerful Open Source Business Forum that can be installed on your server.Open source Laravel Forum
 
-## Starting 🚀
+## Starting
 
 _These instructions will allow you to get a copy of the project running on your local machine for development and testing purposes._
 
-## Demo Web-App :movie_camera: 
+## Demo  
 
-* [Demo Reviews Module ](https://www.youtube.com/watch?v=KuaaLIFbkX0)
-* [Demo Laravel](https://www.youtube.com/watch?v=MYZlIE4x8MU)
+* [Install Project ](https://www.youtube.com/watch?v=U1zIbFJqXHU)
 
-### Pre-requirements 📋
+
+## Setup
 
 - PHP 8.3 >=
 - PostgreSQL (Or MySQL)
@@ -43,7 +64,7 @@ The following steps are meant to be used on a development server.
 - Clone Project
 
 ```bash
-$ git clone https://github.com/jonathancastroccs/pymesshopjc.git
+$ git clone https://github.com/foroworkers/foroworkers.git
 ``` 
 
 - Pull Project Dev Branch
@@ -54,7 +75,7 @@ $ git pull origin dev
 - Navigate to the root of the Laravel project
 
 ```bash
-$ cd v_laravel
+$ cd foroworkers
 ``` 
 - Setup vendor libraries 
 
@@ -75,7 +96,10 @@ $ php artisan key:generate
 ``` 
 
 ```bash
-First Step Create New Database Example: pymesshopjc
+First Step Create New Database Example: foroworkers
+
+APP_LOCALE=en
+PAYPAL_EMAIL=yourpaypalemail
 APP_ENDPOINT=https://sistemaspymesjc.blogspot.com/p/trabaja-con-nosotros.html
 APP_ENDPOINT_LOCAL=
 APP_AUTHOR=jonathancastro
@@ -84,9 +108,22 @@ APP_COPYRIGHT=sistemaspymesjc
 APP_DONATE=https://www.paypal.com/paypalme/programadorjonathan
 APP_PHONE=5804241666224
 
-DB_DATABASE=pymesshopjc
-DB_USERNAME=jonathan
-DB_PASSWORD=123
+database connection
+
+DB_DATABASE=foroworkers
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+for sending emails
+
+MAIL_MAILER=
+MAIL_HOST=
+MAIL_PORT=
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_ENCRYPTION=
+MAIL_FROM_ADDRESS=
+MAIL_FROM_NAME=
 ```
 
 ```bash
@@ -105,12 +142,12 @@ $ php artisan serve
 ```
 
 
-## Access Web-App:
+## Access:
 
-_Admin: sistemaspymesjc@gmail.com
+_Admin: admin@gmail.com
 _Pass: Test1234
 
-_User: sistemaspymesjc@gmail.com
+_User: user@gmail.com
 _Pass: Test1234
 
 ## Technologies 🛠️
@@ -122,7 +159,6 @@ _Pass: Test1234
 
 ## Courses :movie_camera: 
 
-* [Youtube](https://www.youtube.com/@sistemaspymesjc)
 * [Udemy](https://www.udemy.com/user/jonathan-castro-33/)    
 
 ## Author ✒️
@@ -130,17 +166,19 @@ _Pass: Test1234
 * **Jonathan Castro** - *Web Developer* - [jonathancastrodeveloper](https://github.com/jonathancastroccs)
 
 
-## Contact :mailbox:
+## Support
 
 _sistemaspymesjc@gmail.com_
 
 * If you would like a business forum with many extra features, please contact us with your requirements and budget. Thank you.
 
-## Donations 🎁
+## Donations
 
 * [Paypal](https://www.paypal.com/paypalme/programadorjonathan) - Thank you very much for your contribution.
 
-* [Patreon](https://www.patreon.com/c/LaravelCoders) - Thank you very much for your contribution.
+* [Ko-Fi](https://ko-fi.com/foroworkers) - Thank you very much for your contribution.
+
+* [Patreon](https://www.patreon.com/c/foroworkers) - Thank you very much for your contribution.
 
 
 
